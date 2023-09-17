@@ -1,4 +1,5 @@
 using Mapster;
+using MapsterMapper;
 using Microsoft.EntityFrameworkCore;
 using PostService.API.Models;
 using PostService.API.Services;
@@ -20,6 +21,9 @@ builder.Services.AddScoped<IPostServices, PostServices>();
 // Register Mapster
 var config = TypeAdapterConfig.GlobalSettings;
 config.Scan(Assembly.GetExecutingAssembly());
+
+builder.Services.AddSingleton(config);
+builder.Services.AddScoped<IMapper, ServiceMapper>();
 
 var app = builder.Build();
 
