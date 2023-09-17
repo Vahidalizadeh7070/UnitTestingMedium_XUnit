@@ -71,8 +71,8 @@ namespace PostService.Test.TestController
             var res = await controller.Get();
 
             // Assert
-            var noContentResult = Assert.IsType<OkObjectResult>(res);
-            Assert.Equal(StatusCodes.Status200OK, noContentResult.StatusCode);
+            var OkResult = Assert.IsType<OkObjectResult>(res);
+            Assert.Equal(StatusCodes.Status200OK, OkResult.StatusCode);
         }
     }
 }
