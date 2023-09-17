@@ -7,12 +7,6 @@ using PostService.API.DTO;
 using PostService.API.Models;
 using PostService.API.Services;
 using PostService.Test.Dummy;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PostService.Test.TestController
 {
